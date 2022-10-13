@@ -9,11 +9,11 @@ class Solution {
         // Move the two pointers until they reach the proper starting point
         // in the list.
         ListNode cur = head, prev = null;
-        while (m > 1) {
+        int count = 1;
+        while (count < m) {
             prev = cur;
             cur = cur.next;
-            m--;
-            n--;
+            count++;
         }
 
         // The two pointers that will fix the final connections.
@@ -21,12 +21,12 @@ class Solution {
 
         // Iteratively reverse the nodes until n becomes 0.
         ListNode third = null;
-        while (n > 0) {
+        while (count <= n) {
             third = cur.next;
             cur.next = prev;
             prev = cur;
             cur = third;
-            n--;
+            count++;
         }
 
         // Adjust the final connections as explained in the algorithm
