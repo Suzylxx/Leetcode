@@ -12,9 +12,6 @@ class Solution {
         }
         
         for (Character c : noteMap.keySet()) {
-            System.out.println(c);
-            System.out.println(noteMap.get(c));
-            System.out.println(magazineMap.get(c));
             if (magazineMap.containsKey(c)) {
                 if (noteMap.get(c) > magazineMap.get(c)) {
                     return false;
