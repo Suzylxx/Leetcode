@@ -8,7 +8,7 @@ class Solution {
         for (char currChar : s.toCharArray()) {
             // If the current character make a pair with the last character in the stack,
             // remove both of them. Otherwise, we the add current character to stack.
-            if (!stack.isEmpty() && Math.abs(stack.lastElement() - currChar) == 32) 
+            if (!stack.isEmpty() && Math.abs(stack.peek() - currChar) == 32) 
                 stack.pop();
             else
                 stack.add(currChar);
