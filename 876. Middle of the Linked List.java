@@ -41,14 +41,14 @@ class Solution {
  */
 class Solution {
     public ListNode middleNode(ListNode head) {
-        ListNode middle = head;
-        ListNode end = head;
-        
-        while (end != null && end.next != null) {
-            middle = middle.next;
-            end = end.next.next;
+        ListNode first = head;
+        ListNode second = head;
+
+        while (second != null && second.next != null) {
+            first = first.next;
+            second = second.next.next;
         }
-        
-        return middle;
+
+        return first;
     }
 }
